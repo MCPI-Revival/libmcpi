@@ -42,7 +42,7 @@ pack:
 	mkdir -p ./deb/usr/include/
 	mkdir -p ./deb/DEBIAN/
 	cp ./build/libmcpi.so ./deb/usr/lib/
-	cp ./mcpi.h ./deb/usr/include/
+	cp ./src/mcpi.h ./deb/usr/include/
 	chmod 0755 ./deb/usr/lib/libmcpi.so
 	echo "Package: libmcpi\nVersion: 0.1.0\nPriority: optional\nArchitecture: armhf\nMaintainer: Alvarito050506 <donfrutosgomez@gmail.com>\nHomepage: https://mcpi.tk\nDescription: A C library for interacting with and extending the Minecraft Pi Protocol.\n" > ./deb/DEBIAN/control
 	dpkg-deb -b ./deb/ ./libmcpi_0.1.0-1.deb
