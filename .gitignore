@@ -1,0 +1,6 @@
+# Builds
+build/
+
+# Debian
+libmcpi_*-*.deb
+deb/
