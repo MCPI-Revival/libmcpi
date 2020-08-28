@@ -26,7 +26,7 @@ all:
 
 install:
 	cp ./build/libmcpi.so /usr/lib
-	cp ./mcpi.h /usr/include
+	cp ./src/mcpi.h /usr/include
 	chmod 0755 /usr/lib/libmcpi.so
 	ldconfig
 
