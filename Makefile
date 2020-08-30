@@ -21,7 +21,7 @@
 
 all:
 	mkdir -p build
-	gcc -c -fPIC ./src/mcpi.c -I./ -o ./build/mcpi.o
+	gcc -c -fPIC ./src/mcpi.c -I./src -o ./build/mcpi.o
 	gcc -shared -fPIC ./build/mcpi.o -o ./build/libmcpi.so
 
 install:
@@ -44,7 +44,15 @@ pack:
 	cp ./build/libmcpi.so ./deb/usr/lib/
 	cp ./src/mcpi.h ./deb/usr/include/
 	chmod 0755 ./deb/usr/lib/libmcpi.so
-	echo "Package: libmcpi\nVersion: 0.1.0\nPriority: optional\nArchitecture: armhf\nMaintainer: Alvarito050506 <donfrutosgomez@gmail.com>\nHomepage: https://mcpi.tk\nDescription: A C library for interacting with and extending the Minecraft Pi Protocol.\n" > ./deb/DEBIAN/control
+	@echo "Package: libmcpi" > ./deb/DEBIAN/control
+	@echo "Version: 0.2.0" >> ./deb/DEBIAN/control
+	@echo "Priority: optional" >> ./deb/DEBIAN/control
+	@echo "Architecture: armhf" >> ./deb/DEBIAN/control
+	@echo "Maintainer: Alvarito050506 <donfrutosgomez@gmail.com>" >> ./deb/DEBIAN/control
+	@echo "Homepage: https://mcpi.tk" >> ./deb/DEBIAN/control
+	@echo "Vcs-Browser: https://github.com/MCPI-Devs/libmcpi" >> ./deb/DEBIAN/control
+	@echo "Vcs-Git: https://github.com/MCPI-Devs/libmcpi.git" >> ./deb/DEBIAN/control
+	@echo "Description: C library for interacting with and extending the Minecraft Pi Protocol.\n" >> ./deb/DEBIAN/control
 	dpkg-deb -b ./deb/ ./libmcpi_0.1.0-1.deb
 
 clean:
