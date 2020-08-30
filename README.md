@@ -12,6 +12,15 @@ To build and use the library, you need:
 ### Download
 If you are using a Raspberry Pi, you can download and install the Debian package from the _[releases](https://github.com/MCPI-Devs/libmcpi/releases)_ section.
 
+You can also install it from the Packagecloud Debian repository:
+```shell
+# If you didn't add the repository yet
+curl -s https://packagecloud.io/install/repositories/Alvarito050506/mcpi-devs/script.deb.sh | sudo bash
+
+# Now the actual installation
+sudo apt-get install libmcpi
+```
+
 ## Build
 You can build, test and install the sources using `make`:
 ```bash
@@ -21,7 +30,7 @@ make install
 make test-global # For testing after install
 ```
 
-You can also build the Debian package using make:
+You can also build the Debian package using `make`:
 ```bash
 make pack
 ```
