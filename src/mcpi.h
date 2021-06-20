@@ -38,6 +38,6 @@ typedef struct mcpi_err_t
 	char chr;
 } mcpi_err_t;
 
-mcpi_command_t mcpi_parse_command(char* string, mcpi_err_t* err);
+mcpi_command_t mcpi_parse_command(const char* string, mcpi_err_t* err);
 
 #endif /* LIB_MCPI_H */

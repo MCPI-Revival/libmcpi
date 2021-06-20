@@ -24,7 +24,7 @@
 #include <stdio.h>
 #include <mcpi.h>
 
-mcpi_command_t mcpi_parse_command(char* string, mcpi_err_t* err)
+mcpi_command_t mcpi_parse_command(const char* string, mcpi_err_t* err)
 {
 	char y;
 	int i = 0, j = 0, k = 0;

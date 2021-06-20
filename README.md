@@ -70,7 +70,7 @@ typedef struct mcpi_err_t
 } mcpi_err_t;
 ```
 
-### `mcpi_command_t parse_command(char* string, mcpi_err_t* err)`
+### `mcpi_command_t mcpi_parse_command(const char* string, mcpi_err_t* err)`
 Returns the parsed `string` as a `mcpi_command_t`. You should check the `err` output argument for errors.
 
 ## Licensing
