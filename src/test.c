@@ -1,7 +1,7 @@
 /*
  * test.c
  * 
- * Copyright 2020 Alvarito050506 <donfrutosgomez@gmail.com>
+ * Copyright 2020-2021 Alvarito050506 <donfrutosgomez@gmail.com>
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
 	mcpi_err_t err;
 	mcpi_command_t command;
 
-	command = parse_command("package.command(0,arg,arg2)", &err);
+	command = mcpi_parse_command("package.command(0,arg,arg2)", &err);
 	if (err.code)
 	{
 		printf("\x1b[1;31mSyntax Error:\x1b[0m at position %i, unexcepted character '\x1b[1m%c\x1b[0m'.\n", err.pos, err.chr);

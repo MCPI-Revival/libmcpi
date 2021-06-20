@@ -1,7 +1,7 @@
 #
 #  Makefile
 #  
-#  Copyright 2020 Alvarito050506 <donfrutosgomez@gmail.com>
+#  Copyright 2020-2021 Alvarito050506 <donfrutosgomez@gmail.com>
 #  
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU Lesser General Public License as published by
@@ -49,11 +49,11 @@ pack:
 	@echo "Priority: optional" >> ./deb/DEBIAN/control
 	@echo "Architecture: armhf" >> ./deb/DEBIAN/control
 	@echo "Maintainer: Alvarito050506 <donfrutosgomez@gmail.com>" >> ./deb/DEBIAN/control
-	@echo "Homepage: https://mcpi.tk" >> ./deb/DEBIAN/control
+	@echo "Homepage: https://mcpirevival.tk" >> ./deb/DEBIAN/control
 	@echo "Vcs-Browser: https://github.com/MCPI-Devs/libmcpi" >> ./deb/DEBIAN/control
 	@echo "Vcs-Git: https://github.com/MCPI-Devs/libmcpi.git" >> ./deb/DEBIAN/control
 	@echo "Description: C library for interacting with and extending the Minecraft Pi Protocol.\n" >> ./deb/DEBIAN/control
-	dpkg-deb -b ./deb/ ./libmcpi_0.1.0-1.deb
+	dpkg-deb -b ./deb/ ./libmcpi_0.2.0-1.deb
 
 clean:
 	rm -rf ./build/

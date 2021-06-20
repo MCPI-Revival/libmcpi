@@ -1,7 +1,7 @@
 /*
  * mcpi.h
  * 
- * Copyright 2020 Alvarito050506 <donfrutosgomez@gmail.com>
+ * Copyright 2020-2021 Alvarito050506 <donfrutosgomez@gmail.com>
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -38,6 +38,6 @@ typedef struct mcpi_err_t
 	char chr;
 } mcpi_err_t;
 
-mcpi_command_t parse_command(char* string, mcpi_err_t* err);
+mcpi_command_t mcpi_parse_command(char* string, mcpi_err_t* err);
 
 #endif /* LIB_MCPI_H */

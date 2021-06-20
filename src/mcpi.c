@@ -1,7 +1,7 @@
 /*
  * mcpi.c
  * 
- * Copyright 2020 Alvarito050506 <donfrutosgomez@gmail.com>
+ * Copyright 2020-2021 Alvarito050506 <donfrutosgomez@gmail.com>
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -24,7 +24,7 @@
 #include <stdio.h>
 #include <mcpi.h>
 
-mcpi_command_t parse_command(char* string, mcpi_err_t* err)
+mcpi_command_t mcpi_parse_command(char* string, mcpi_err_t* err)
 {
 	char y;
 	int i = 0, j = 0, k = 0;
